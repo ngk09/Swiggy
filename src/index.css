@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.black-overlay{
+
+  background-color: rgba(0,0,0,0.7);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* Container for the buttons */
+/* Container for the buttons */
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows buttons to wrap onto multiple lines */
+  gap: 10px; /* Space between buttons */
+  padding: 10px;
+}
+
+/* Basic styling for buttons */
+.restaurant-btn {
+  background-color: #ff9800; /* Lighter orange color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px; /* Adjusted font size for better fit */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  white-space: nowrap; /* Prevents button text from wrapping */
+}
+
+/* Hover effect */
+.restaurant-btn:hover {
+  background-color: #fb8c00; /* Slightly darker orange on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Active effect */
+.restaurant-btn:active {
+  background-color: #f57c00; /* Even darker orange when button is pressed */
+  transform: scale(0.98); /* Slightly shrink button on press */
+}
+
+/* Disabled state (if needed) */
+.restaurant-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+/* Footer styling */
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ff6f61; /* Swiggy's signature color */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ff6f61; /* Swiggy's signature color */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #eee;
+  color: #777;
+  font-size: 14px;
+}
+
+.app-buttons {
+  margin-top: 10px;
+}
+
+.app-button {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.app-button img {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  vertical-align: middle;
 }
